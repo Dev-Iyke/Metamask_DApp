@@ -62,6 +62,7 @@ async function switchToSepolia() {
             },
           ],
         });
+        updateBalance();
       } catch (addError) {
         console.error("Error adding Sepolia:", addError);
       }
