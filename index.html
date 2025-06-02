@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SendETH DApp</title>
+  </head>
+  <body>
+    <div id="app">
+      <div>
+        <h1 style="text-align: center;">MetaMask DApp</h1>
+        <button id="connectBtn">Connect Wallet</button>
+        <button id="switchNetworkBtn">Switch to Sepolia</button>
+        <p id="account"></p>
+        <p id="balance"></p>
+
+        <h2>Send ETH</h2>
+        <input id="toAddress" placeholder="Recipient address" />
+        <input id="amount" placeholder="Amount in ETH" type="number" />
+        <button id="sendBtn">Send ETH</button>
+
+        <p id="status"></p>
+        <hr>
+        <div>
+          <h2>Vote for a Proposal</h2>
+          <select id="voteOption">
+            <option value="1">Proposal 1</option>
+            <option value="2">Proposal 2</option>
+          </select>
+          <button id="voteBtn">Vote</button>
+          <p id="voteStatus"></p>
+        </div>
+      </div>
+
+    </div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
