@@ -61,3 +61,6 @@ npm run dev
 Obasi Ikechukwu Thompson (Dev-Iyke)
 - CS50 – Final Project Submission
 - Powered by Ethers.js + MetaMask
+
+### Deployment:
+### Hosted Url:  [HERE](https://metamask-eth-dapp.vercel.app/)
