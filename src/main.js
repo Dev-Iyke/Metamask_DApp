@@ -73,10 +73,12 @@ async function switchToSepolia() {
 }
 
 async function connectWallet() {
+  connectBtn.innerHTML = `<div id="vote-loader" class="custom-loader"></div> `
   const detected = await detectEthereumProvider();
 
   if (!detected) {
     alert("MetaMask not detected. Please install MetaMask.");
+    connectBtn.innerHTML = `Connect Wallet`;
     return;
   }
 
@@ -103,6 +105,8 @@ async function connectWallet() {
   } catch (err) {
     console.error("Connection error:", err);
     statusP.textContent = "Failed to connect.";
+  } finally {
+    connectBtn.innerHTML = `Connect Wallet`;
   }
 }
 
@@ -115,11 +119,14 @@ async function updateBalance() {
 }
 
 async function sendETH() {
+  sendBtn.innerHTML = `<div id="vote-loader" class="custom-loader"></div> `
   const to = toAddressInput.value.trim();
   const amount = amountInput.value.trim();
 
   if (!ethers.isAddress(to)) {
     alert("Invalid recipient address");
+    statusP.textContent = "Invalid recipient address.";
+    sendBtn.innerHTML = `Send ETH`;
     return;
   }
 
@@ -139,13 +146,17 @@ async function sendETH() {
     console.error("Send error:", err);
     console.log(err)
     statusP.textContent = "Failed to send transaction.";
+  } finally {
+    sendBtn.innerHTML = `Send ETH`;
   }
 }
 
 
 async function vote () {
+  voteBtn.innerHTML = `<div id="vote-loader" class="custom-loader"></div> `
   if (!signer) {
     voteStatus.textContent = "Please connect your wallet first.";
+    voteBtn.innerHTML = `Vote`;
     return;
   }
 
@@ -153,6 +164,7 @@ async function vote () {
 
   if (![1, 2].includes(proposal)) {
     voteStatus.textContent = "Invalid proposal selection.";
+    voteBtn.innerHTML = `Vote`;
     return;
   }
 
@@ -171,6 +183,8 @@ async function vote () {
   } catch (err) {
     console.error("Voting failed:", err);
     voteStatus.textContent = "❌ Voting failed. See console for details.";
+  } finally {
+    voteBtn.innerHTML = `Vote`;
   }
 }
 

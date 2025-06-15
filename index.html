@@ -8,10 +8,21 @@
   </head>
   <body>
     <div id="app">
-      <div>
+      <div id="content">
         <h1 style="text-align: center;">MetaMask DApp</h1>
-        <button id="connectBtn">Connect Wallet</button>
-        <button id="switchNetworkBtn">Switch to Sepolia</button>
+        <div>
+          <p>
+            This is a simple DApp that allows you to connect your MetaMask wallet,
+            switch to the Sepolia network, check your account balance, send ETH,
+            and vote on proposals.
+          </p>
+          <p style="color: red;">
+            Make sure you have MetaMask installed and set to the Sepolia test network.
+        </div>
+        <div id="wallet-btns">
+          <button id="connectBtn">Connect Wallet</button>
+          <button id="switchNetworkBtn">Switch to Sepolia</button>
+        </div>
         <p id="account"></p>
         <p id="balance"></p>
 
