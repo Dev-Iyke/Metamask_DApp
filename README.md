@@ -1,6 +1,11 @@
 # MetaMask SendETH + Voting DApp (Sepolia Testnet)
 
-### Video Demo:  <URL HERE>
+### Video Demo:  [HERE](https://www.youtube.com/watch?v=EFmQR_qXg-4)
+### Name: OBASI IKECHUKWU THOMPOSN
+### GitHub Username: Dev-Iyke
+### EDX Username: Dev_Iyke
+### Lagos, Nigeria
+### 15/06/2025
 
 ## Description:
 This is a simple Ethereum DApp built using **Ethers.js v6**, **HTML**, and **Vanilla JS**.
@@ -54,5 +59,5 @@ npm run dev
 
 ## Author
 Obasi Ikechukwu Thompson (Dev-Iyke)
-- Web3 Assessment – Final Project Submission
+- CS50 – Final Project Submission
 - Powered by Ethers.js + MetaMask
